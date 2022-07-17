@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="true">
+  <ion-searchbar (input)="search($event)"></ion-searchbar>
+  <ion-list [ngStyle]="{'visibility':showResults()}">
+    <ion-item *ngFor="let result of results.results" (click)="showDetails(result)">
+      <ion-label>{{result.title}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <app-detail (update)=updateDetailState() [isModalOpen]="isDetailOpen" [movie]="movie" [poster]="poster">
+  </app-detail>
+</ion-content>

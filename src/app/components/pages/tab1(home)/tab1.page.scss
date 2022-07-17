@@ -1,0 +1,22 @@
+ion-content{
+  text-align:center
+}
+
+h1{
+  margin-top: 25%
+}
+
+img{
+  width: 60%;
+  text-align:center
+}
+
+@media only screen and (min-width: 577px) {
+  img {
+    width: 25%;
+  }
+
+  h1{
+    margin-top: 8%
+  }
+}
