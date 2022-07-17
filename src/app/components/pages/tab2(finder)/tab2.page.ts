@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/models/movie.interface';
+import { Movies } from 'src/app/models/movie.interface';
 
 @Component({
   selector: 'app-tab2',
@@ -12,14 +13,14 @@ export class Tab2Page {
   isDetailOpen = false;
   poster: string;
   movie: Movie;
-  results: any = [];
+  results: Movies = [];
 
   constructor(private movieService: MovieService) {}
 
     search(searchTerm) {
       if(searchTerm.target.value !== ''){
-        this.movieService.getMovies(searchTerm.target.value).subscribe(data => {
-          this.results = data;
+        this.movieService.getMovies(searchTerm.target.value).subscribe((data: any) => {
+          this.results = data.results;
       });
       }
     }
