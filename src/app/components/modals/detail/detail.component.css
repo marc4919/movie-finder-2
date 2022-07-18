@@ -2,3 +2,42 @@ ion-card-subtitle, ion-card-content{
   color:black
 }
 
+img{
+  width: 70%;
+  height: 10% !important;
+}
+
+.image-container{
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+ion-card-header{
+  text-align: center
+}
+
+@media only screen and (min-width: 577px) {
+  img {
+    width: 50%;
+  }
+
+  .image-container{
+    float: left;
+    width: 50%;
+    padding-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .text-container{
+    padding-top: 7%;
+    padding-right: 10%;
+    text-align: left;
+  }
+
+  ion-card-header{
+    text-align: left
+  }
+
+
+}
