@@ -10,14 +10,18 @@
     </ion-header>
     <ion-content class="ion-padding">
       <ion-card>
-        <img src={{poster}} alt={{movie.title}} />
-        <ion-card-header>
-          <ion-card-subtitle>{{movie.releaseDate}} {{movie.originalLanguage}} </ion-card-subtitle>
-          <ion-card-title>{{movie.title}}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          {{movie.overview}}
-        </ion-card-content>
+        <div class="image-container">
+          <img src={{poster}} alt={{movie.title}} />
+        </div>
+        <div class="text-container">
+          <ion-card-header>
+            <ion-card-subtitle>{{movie.releaseDate}} {{movie.originalLanguage}} </ion-card-subtitle>
+            <ion-card-title>{{movie.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{movie.overview}}
+          </ion-card-content>
+        </div>
       </ion-card>
     </ion-content>
   </ng-template>
